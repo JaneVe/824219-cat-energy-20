@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Янина](https://up.htmlacademy.ru/adaptive/20/user/824219).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил](https://htmlacademy.ru/profile/mpodanev).
 
 ---
 
