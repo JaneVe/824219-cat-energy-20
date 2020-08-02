@@ -1,1 +1,84 @@
 // Начните писать стили здесь
+@basic-white: #F2F2F2;
+@uppercase: uppercase;
+@white: #FFFFFF;
+@oswald-text: 'Oswald';
+
+@font-face {
+  font-family: 'Oswald';
+  src:
+    url('../fonts/oswaldregular.woff') format('woff'),
+    url('../fonts/oswaldregular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src:
+    url('../fonts/oswaldmedium.woff') format('woff'),
+    url('../fonts/oswaldmedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+
+  background-color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #444444;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@import "source\less\blocks\main-header.less";
+@import "source\less\blocks\container.less";
+@import "source\less\blocks\footer.less";
+@import "source\less\blocks\main-nav.less";
+@import "source\less\blocks\promo.less";
+@import "source\less\blocks\products.less";
+@import "source\less\blocks\features.less";
+@import "source\less\blocks\story.less";
+@import "source\less\blocks\location.less";
+@import "source\less\blocks\footer-logo.less";
+@import "source\less\blocks\social.less";
+@import "source\less\blocks\copyright.less";
+@import "source\less\blocks\catalog.less";
+@import "source\less\blocks\show-more.less";
+@import "source\less\blocks\additional-products.less";
+@import "source\less\blocks\programm.less";
+@import "source\less\blocks\additional-list.less";
+@import "source\less\blocks\catalog-list.less";
+@import "source\less\blocks\form.less";
+@import "source\less\blocks\site-list.less";
+@import "source\less\blocks\slider.less";
+@import "source\less\blocks\social-button.less";
+@import "source\less\blocks\button.less";
+@import "source\less\blocks\option-list.less";
+@import "source\less\blocks\product-other.less";
+@import "source\less\blocks\product.less";
