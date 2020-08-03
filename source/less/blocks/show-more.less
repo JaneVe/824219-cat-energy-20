@@ -3,11 +3,11 @@
 }
 
 .show-more__title {
-  font-family: @oswald-text;
+  font-family: @special-font;
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  text-transform: @uppercase;
+  text-transform: uppercase;
   color: #111111;
   text-align: center;
 }
@@ -20,22 +20,22 @@
 
 .show-more__button {
   outline: solid 3px blue;
-  background-color: @basic-white;
-  font-family: @oswald-text;
+  background-color: @basic_grey;
+  font-family: @special-font;
   font-weight: normal;
   font-size: 16px;
   line-height: 0px;
-  text-transform: @uppercase;
-  color: #444444;
+  text-transform: uppercase;
+  color: @special_dark-grey;
   text-align: center;
-}
 
-.show-more__button:hover {
-  background-color: #ebebeb;
-  color: #444444;
-}
+  &:hover {
+  background-color: @special_grey-2;
+  color: @special_dark-grey;
+  }
 
-.show-more__button:active {
-  background-color: #ebebeb;
+  &:active {
+  background-color: @special_grey-2;
   color: rgba(68, 68, 68, 0.3);
+  }
 }
