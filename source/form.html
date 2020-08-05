@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="main-header">
-      <a class="header__logo" href="index.html">
+      <a class="main-header__logo" href="index.html">
         <img src="https://via.placeholder.com/101x18" alt="Логотип Кэт энерджи">
       </a>
       <nav class="main-nav">
@@ -16,17 +16,17 @@
         </button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a href="catalog.html">
+          <li class="site-list__item">
+            <a class="site-list__link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="site-list__item">
-            <a>
+            <a class="site-list__link site-list__link--activ">
               Подбор программы
             </a>
           </li>
@@ -35,10 +35,10 @@
     </header>
       <main class="container">
         <section class="programm">
-          <h1 class="container__title">Подбор программы</h1>
+          <h1 class="programm__title title">Подбор программы</h1>
           <p class="programm__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
           <form class="programm__form form" action="https://echo.htmlacademy.ru" method="POST">
-            <fieldset class="form__information">
+            <fieldset class="form__information form-block">
               <legend class="visually-hidden">Информация о коте</legend>
               <p class="form__name">
                 <label>Имя:*
@@ -56,7 +56,7 @@
                 </label>
               </p>
             </fieldset>
-            <fieldset class="form__programms">
+            <fieldset class="form__programms form-block">
               <legend class="visually-hidden">Выбор программы</legend>
               <ul class="form__option option-list">
                 <li class="option-list__item">
@@ -79,8 +79,8 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__contacts">
-              <legend class="form__contacts-title">Контактные данные (владельца кота)</legend>
+            <fieldset class="form__contacts form-block">
+              <legend class="form__contacts-title form-title">Контактные данные (владельца кота)</legend>
               <p class="form__email">
                 <label>E-mail:*
                   <input type="email" name="email" placeholder="kuklachev@gmail.com" required>
@@ -92,32 +92,32 @@
                 </label>
               </p>
             </fieldset>
-            <fieldset class="form__comment">
-              <legend class="form__comment-title">Комментарий</legend>
-              <textarea name="comment" rows="8" cols="25">Расскажите обо всех повадках кота</textarea>
+            <fieldset class="form__comment form-block">
+              <legend class="form__comment-title form-title">Комментарий</legend>
+              <textarea name="comment" rows="8" cols="50">Расскажите обо всех повадках кота</textarea>
             </fieldset>
-            <fieldset class="form__additional">
-              <legend class="form__additional-title">Дополнительно</legend>
-              <ul class="form__additional-list option-list">
-                <li class="option-list__item">
+            <fieldset class="form__additional form-block">
+              <legend class="form__additional-title form-title">Дополнительно</legend>
+              <ul class="form__additional-list form-additional">
+                <li class="form-additional__item">
                   <label>
                     <input type="checkbox" name="sweetener" checked>
                     Сахарозаменитель
                   </label>
                 </li>
-                <li class="option-list__item">
+                <li class="form-additional__item">
                   <label>
                     <input type="checkbox" name="water">
                     Питьевая вода
                   </label>
                 </li>
-                <li class="option-list__item">
+                <li class="form-additional__item">
                   <label>
                     <input type="checkbox" name="milk">
                     Молоко
                   </label>
                 </li>
-                <li class="option-list__item">
+                <li class="form-additional__item">
                   <label>
                     <input type="checkbox" name="vitamins">
                     Витамины
@@ -129,7 +129,7 @@
               Отправить заявку
             </button>
           </form>
-          <small class="programm__legend programm__legend--bottom">
+          <small class="programm__legend">
             * — Обязательные поля
           </small>
         </section>
