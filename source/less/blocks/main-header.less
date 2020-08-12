@@ -1,3 +1,38 @@
 .main-header {
   outline: 3px red solid;
 }
+
+.main-header__wrapper {
+  padding: 0 20px;
+  min-height: 264px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    min-height: 78px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 110px;
+    max-width: 1220px;
+    margin: 0 auto;
+    min-height: 109px;
+  }
+}
+
+.main-header__logo {
+  height: 38px;
+
+  @media (min-width: @tablet-width) {
+      height: 52px;
+      width: 174px;
+  }
+  @media (min-width: @desktop-width) {
+    height: 59px;
+    width: 202px;
+  }
+}

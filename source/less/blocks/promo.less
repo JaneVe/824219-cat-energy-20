@@ -4,9 +4,23 @@
   background-color: #63a73a;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+
+  margin-bottom: 20px;
+  min-height: 480px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 852px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+    min-height: 587px;
+  }
 }
 
 .promo__title {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 36px;
   line-height: 36px;
@@ -15,6 +29,8 @@
 }
 
 .promo__slogan {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 14px;
   line-height: 14px;

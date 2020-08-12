@@ -2,14 +2,32 @@
   outline: orange 3px solid;
 
   background-color: #eaeaea;
+
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
 }
 
 .story__title {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 36px;
   line-height: 40px;
   font-weight: normal;
   color: @basic-black;
+}
+
+.story__text {
+  margin: 0;
 }
 
 .story__number {
@@ -29,6 +47,8 @@
 }
 
 .story__info {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 14px;
   line-height: 20px;

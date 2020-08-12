@@ -1,13 +1,40 @@
 .products {
   outline: solid 3px orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .products__slim,
 .products__pro {
+  outline: solid 3px orange;
   background-color: @basic_grey;
+  min-height: 266px;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 372px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 374px;
+    width: 570px;
+  }
 }
 
 .products__subject {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 24px;
   line-height: 37px;
@@ -16,7 +43,13 @@
   color: @basic-black;
 }
 
+.products__desc {
+  margin: 0;
+}
+
 .products__button {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 16px;
   line-height: 16px;

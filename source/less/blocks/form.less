@@ -8,7 +8,122 @@
   color: @special_dark-grey;
 }
 
-input[placeholder] {
+.form__text {
+  margin: 0;
+
+  font-family: @special-font;
+  text-transform: uppercase;
+  color: @basic-black;
+}
+
+.form__information-wrapper {
+
+  min-height: 344px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 468px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    min-height: 200px;
+    margin-bottom: 65px;
+  }
+}
+
+.form__information,
+.form__programms {
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    min-height: 200px;
+    width: 570px;
+  }
+}
+
+.form__option {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.form__contacts {
+  padding: 0;
+  min-height: 180px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 236px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 200px;
+  }
+}
+
+.form__email,
+.form__tel {
+  width: 570px;
+}
+
+.form__comment {
+  min-height: 210px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 315px;
+  }
+}
+
+.form__additional {
+  padding: 0;
+  min-height: 291px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 311px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 133px;
+  }
+}
+
+.form__additional-list {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+ @media (min-width: @tablet-width) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+}
+
+.form__batton-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+   }
+}
+
+.form__button {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.form__legend {
+  font-size: 14px;
+  line-height: 16px;
+  color: @basic-black;
+}
+
+.form__textarea-comment {
   font-family: @special-font;
   font-size: 16px;
   line-height: 18px;
@@ -17,18 +132,7 @@ input[placeholder] {
   color: @special_dark-grey;
 }
 
-.option-list__item {
-  list-style: none;
-
-  color: @special_dark-grey-2;
-}
-
-.form__button {
-  border: none;
-  outline: none;
-}
-
-textarea[name="comment"] {
+.form__textform {
   font-family: @special-font;
   font-size: 16px;
   line-height: 18px;
