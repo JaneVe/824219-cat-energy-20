@@ -1,9 +1,17 @@
 .additional-list {
   outline: solid 3px greenyellow;
-
-  padding: 0;
 }
 
 .additional-list__item {
-  list-style: none;
+  outline: solid 3px black;
+
+  min-height: 98px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 140px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 72px;
+  }
 }

@@ -1,8 +1,23 @@
 .features {
   outline: orange 3px solid;
+
+  margin-bottom: 42px;
+  min-height: 378px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 47px;
+    min-height: 689px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 11px;
+    min-height: 383px;
+  }
 }
 
 .features__subtitle {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 36px;
   line-height: 40px;
@@ -12,10 +27,29 @@
 .features__list {
   margin: 0;
   padding: 0;
+  min-height: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    min-height: 597px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 280px;
+  }
 }
 
 .features__item {
   margin: 0;
-
+  min-height: 60px;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    min-height: 280px;
+    width: 249px;
+  }
 }

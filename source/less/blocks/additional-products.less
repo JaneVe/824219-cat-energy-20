@@ -1,11 +1,42 @@
 .additional-products {
   outline: solid 3px orange;
+
+  margin-top: 28px;
 }
 
 .additional-products__title {
+  margin: 0;
+
   font-family: @special-font;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   color: @basic-black;
+}
+
+.additional-products__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 86px;
+  }
+}
+
+.additional-products__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  min-height: 516px;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 556px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-grow: 1;
+    min-height: 288px;
+    margin-bottom: 0;
+  }
 }
