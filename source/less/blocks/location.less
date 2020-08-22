@@ -1,12 +1,4 @@
 .location {
-  outline: orange 3px solid;
-
-  min-height: 476px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 600px;
-  }
-
   @media (min-width: @desktop-width) {
     min-height: 400px;
     position: relative;
@@ -18,13 +10,17 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  padding-top: 28px;
+  padding-left: 19px;
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     width: 624px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 200px;
     width: 570px;
     position: absolute;
     top: 95px;

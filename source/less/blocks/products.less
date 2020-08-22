@@ -1,9 +1,9 @@
 .products {
-  outline: solid 3px orange;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 15px;
@@ -16,24 +16,22 @@
 
 .products__slim,
 .products__pro {
-  outline: solid 3px orange;
   background-color: @basic_grey;
-  min-height: 266px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-    min-height: 372px;
     margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 374px;
     width: 570px;
   }
 }
 
 .products__subject {
   margin: 0;
+  padding-top: 30px;
+  padding-left: 91px;
 
   font-family: @special-font;
   font-size: 24px;
@@ -41,14 +39,51 @@
   font-weight: normal;
   text-transform: uppercase;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-left: 53px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+  }
 }
 
 .products__desc {
   margin: 0;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 33px;
+  padding-bottom: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    padding-left: 53px;
+    padding-bottom: 48px;
+    padding-right: 260px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 52px;
+    padding-bottom: 23px;
+  }
 }
 
 .products__button {
   margin: 0;
+  padding-top: 15px;
+  margin-left: 19px;
+  margin-right: 19px;
+  padding-bottom: 18px;
+
+  border-top: 1px solid #d9d9d9;
 
   font-family: @special-font;
   font-size: 16px;
@@ -56,10 +91,26 @@
   font-weight: normal;
   text-transform: uppercase;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+    margin-left: 53px;
+    padding-bottom: 57px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border-top: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .products__link {
   color: @basic-black;
+  padding-right: 57px;
 
   &:active {
     color: rgba(0, 0, 0, 0.3);

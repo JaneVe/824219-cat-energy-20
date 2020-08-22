@@ -1,3 +1,45 @@
 .social-button__item {
-  list-style: none;
+  text-align: center;
+  width: 55px;
+}
+
+.social-button__icon {
+  path {
+    fill: @grey;
+  }
+}
+
+.social-button__icon-vk {
+  @media (min-width: @tablet-width) {
+    width: 31px;
+    height: 22px;
+  }
+}
+
+.social-button__icon-ig {
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+.social-button__icon-fb {
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 30px;
+  }
+}
+
+.social-button__link {
+  &:hover .social-button__icon {
+    path {
+      fill: #68b738;
+    }
+  }
+
+  &:active .social-button__icon {
+    path {
+      fill: fade(#68b738, 30%);
+    }
+  }
 }

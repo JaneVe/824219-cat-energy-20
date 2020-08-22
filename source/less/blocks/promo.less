@@ -1,44 +1,107 @@
 .promo {
-  outline: orange 3px solid;
+  margin-bottom: 31px;
+  position: relative;
 
-  background-color: #63a73a;
+  text-align: center;
+  /*background-color: #63a73a;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
-
-  margin-bottom: 20px;
-  min-height: 480px;
+  background-size: cover;*/
 
   @media (min-width: @tablet-width) {
-    min-height: 852px;
+    background-image: none;
+    text-align: left;
+    padding-left: 83px;
+    padding-bottom: 500px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 82px;
-    min-height: 587px;
+    padding-bottom: 200px;
+  }
+}
+
+.promo::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -20px;
+  right: -20px;
+  height: 63.5%;
+  background-color: #68b738;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
 .promo__title {
   margin: 0;
+  padding-top: 27px;
+  padding-right: 15px;
+  padding-left: 15px;
+
 
   font-family: @special-font;
   font-size: 36px;
   line-height: 36px;
   font-weight: normal;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    color: @basic-black;
+    padding-left: 0;
+    padding-right: 190px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+  }
 }
 
 .promo__slogan {
   margin: 0;
+  padding-top: 25px;
+  padding-bottom: 318px;
+  padding-left: 40px;
+  padding-right: 40px;
 
   font-family: @special-font;
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
   color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: @basic-black;
+    padding-left: 0;
+    padding-top: 41px;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 66px;
+  }
 }
 
 .promo__button {
   font-size: 14px;
   line-height: 18px;
+
+  padding: 11px 74px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 0;
+    padding: 14px 26px;
+  }
 }

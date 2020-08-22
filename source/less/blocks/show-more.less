@@ -1,8 +1,24 @@
 .show-more {
-  outline: solid 3px orange;
+  padding-top: 18px;
+  padding-bottom: 25px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-plus-mobile.svg");
+    top: 18px;
+    left: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+  }
 }
 
 .show-more__title {
+  margin: 0;
+  padding-top: 53px;
   font-family: @special-font;
   font-weight: normal;
   font-size: 16px;
@@ -13,21 +29,27 @@
 }
 
 .show-more__text {
+  margin: 0;
+  padding-top: 8px;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
 }
 
 .show-more__button {
-  outline: solid 3px blue;
+  display: inline-block;
   background-color: @basic_grey;
   font-family: @special-font;
   font-weight: normal;
   font-size: 16px;
-  line-height: 0px;
+  line-height: 18px;
   text-transform: uppercase;
   color: @special_dark-grey;
+  width: 100%;
   text-align: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  margin-top: 20px;
 
   &:hover {
     background-color: @special_grey-2;

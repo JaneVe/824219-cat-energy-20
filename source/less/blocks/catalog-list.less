@@ -1,5 +1,4 @@
 .catalog-list {
-  outline: solid 3px greenyellow;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -17,17 +16,22 @@
 }
 
 .catalog-list__item {
+  margin-top: 8px;
 
-  outline: 3px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  min-height: 190px;
-  margin-bottom: 19px;
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @special_grey-2;
+  }
 
   @media (min-width: @tablet-width) {
     width: 315px;
-    min-height: 511px;
     margin-right: 60px;
-    margin-bottom: 59px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 60px;
+    padding-top: 73px;
 
     &:nth-child(2n) {
       margin-right: 0;

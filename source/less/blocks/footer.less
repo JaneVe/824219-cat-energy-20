@@ -1,12 +1,10 @@
 .footer {
-  outline: solid 3px red;
-
   background-color: @basic_grey;
-
-  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
+    max-width: 708px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,16 +15,16 @@
 }
 
 .footer__wrapper {
-  min-height: 236px;
-  display: flex;
+  padding: 0 20px;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 34px;
+    align-items: center;
     padding: 57px 0;
   }
 }

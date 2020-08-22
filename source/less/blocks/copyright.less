@@ -1,17 +1,37 @@
-.copyright {
-  outline: orange 3px solid;
-}
-
-.copyright__info {
-  margin: 0;
-}
-
 .copyright__button-academy {
   font-size: 16px;
   line-height: auto;
   color: @special_dark-grey;
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:hover .copyright__icon {
+    path {
+      fill: @basic_green;
+    }
+  }
+
   &:active {
-    color: rgba(68, 68, 68, 0.3);
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
+}
+
+.copyright__icon {
+  path {
+    fill: #666666;
   }
 }
