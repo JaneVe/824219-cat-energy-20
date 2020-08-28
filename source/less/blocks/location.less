@@ -1,6 +1,12 @@
 .location {
+  min-height: 476px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 601px;
+  }
+
   @media (min-width: @desktop-width) {
-    min-height: 400px;
+    min-height: 404px;
     position: relative;
   }
 }

@@ -1,5 +1,5 @@
 .features {
-  margin-bottom: 42px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 10px;
@@ -19,6 +19,12 @@
   line-height: 40px;
   color: @basic-black;
   font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
@@ -36,9 +42,11 @@
 
 .features__item {
   margin: 0;
+  padding-top: 3px;
   padding-left: 80px;
   padding-right: 5px;
-  padding-bottom: 24px;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
 
   list-style: none;
 
@@ -48,13 +56,35 @@
 
   @media (min-width: @tablet-width) {
     outline: olivedrab 1px solid;
-    width: 249px;
+    width: 320px;
     padding-left: 0;
-    padding-top: 110px;
+    padding-top: 152px;
     padding-bottom: 57px;
-    padding-right: 15px;
+
     margin-bottom: 37px;
+
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-top: 152px;
+    padding-bottom: 57px;
+    width: 245px;
+  }
+}
+
+.features__text {
+  margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @tablet-width) {
+    padding-right: 65px;
   }
 }

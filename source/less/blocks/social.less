@@ -8,15 +8,19 @@
 .social__list {
   padding: 0;
   margin: 0;
+  margin-right: 73px;
+  margin-left: 73px;
   list-style: none;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    align-items: center;
+    width: 129px;
+    margin: 0 auto 0 20px;
   }
 }

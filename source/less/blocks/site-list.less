@@ -71,20 +71,22 @@
         color: fade(@basic-white, 30%);
       }
     }
+  }
+}
 
-    &--activ {
-      color: @basic-white;
-      position: relative;
+.site-list__link--activ.site-list__link--white {
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+    position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 34px;
-        right: 0;
-        left: 0;
-        height: 2px;
-        background: @basic-white;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 34px;
+      right: 0;
+      left: 0;
+      height: 2px;
+      background: @basic-white;
     }
   }
 }
