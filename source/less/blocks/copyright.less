@@ -10,6 +10,7 @@
 
   padding-top: 19px;
   padding-bottom: 20px;
+  margin-right: -5px;
 
   &:hover .copyright__icon {
     path {
@@ -20,13 +21,17 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
 }
 
 .copyright__text {
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    margin-right: 25px;
+    margin-right: 15px;
   }
 }
 
