@@ -1,55 +1,110 @@
 .features {
-  outline: orange 3px solid;
-
-  margin-bottom: 42px;
-  min-height: 378px;
+  margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 47px;
-    min-height: 689px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 11px;
-    min-height: 383px;
   }
 }
 
-.features__subtitle {
+.features__title {
   margin: 0;
+  margin-bottom: 38px;
 
   font-family: @special-font;
   font-size: 36px;
   line-height: 40px;
   color: @basic-black;
+  font-weight: normal;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
 }
 
 .features__list {
   margin: 0;
   padding: 0;
-  min-height: 300px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    min-height: 597px;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 280px;
   }
 }
 
 .features__item {
   margin: 0;
-  min-height: 60px;
+  padding-top: 4px;
+  padding-left: 80px;
+  padding-right: 5px;
+  padding-bottom: 3px;
+  margin-bottom: 20px;
+
   list-style: none;
 
+  &:nth-last-child(1) {
+    padding-bottom: 0;
+  }
+
   @media (min-width: @tablet-width) {
-    min-height: 280px;
-    width: 249px;
+    outline: olivedrab 1px solid;
+    position: relative;
+    width: 320px;
+    padding-left: 0;
+    padding-top: 152px;
+    padding-bottom: 57px;
+
+    margin-bottom: 37px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      counter-increment: section;
+      content: counter(section) "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 115px;
+      width: 134px;
+      height: 280px;
+      font-family: @special-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: @basic_grey;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-top: 152px;
+    padding-bottom: 57px;
+    width: 245px;
+  }
+}
+
+.features__text {
+  margin: 0;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
   }
 }

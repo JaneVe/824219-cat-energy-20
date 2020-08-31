@@ -1,7 +1,17 @@
 .additional-products {
   outline: solid 3px orange;
+  min-height: 903px;
+  margin-bottom: 35px;
 
-  margin-top: 28px;
+  @media (min-width: @tablet-width) {
+    min-height: 930px;
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 405px;
+    margin-bottom: 87px;
+  }
 }
 
 .additional-products__title {
@@ -18,7 +28,6 @@
   @media (min-width: @desktop-width) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 86px;
   }
 }
 
@@ -27,7 +36,7 @@
   margin: 0;
   list-style: none;
 
-  min-height: 516px;
+  min-height: 546px;
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
