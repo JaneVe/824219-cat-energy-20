@@ -1,5 +1,34 @@
-.slider {
-  outline: greenyellow 3px solid;
+.slider__img {
+  margin-bottom: 23px;
+  height: 235px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 16px;
+    height: 342px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 536px;
+    position: absolute;
+    top: -190px;
+    right: 0;
+  }
+}
+
+.slider__controller {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 362px;
+    padding-bottom: 64px;
+    padding-right: 110px;
+  }
 }
 
 .slider__button {
@@ -9,4 +38,31 @@
   font-weight: normal;
   color: @basic-black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted fade(#000000, 40%);
+  }
+}
+
+.slider__button--state--before {
+  margin-right: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 350px;
+  }
+}
+
+.slider__button--state--after {
+  margin-left: 17px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: -60px;
+    margin-left: 0;
+  }
 }

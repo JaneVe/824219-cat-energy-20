@@ -1,41 +1,47 @@
 .location {
-  min-height: 476px;
+
+  padding: 0 20px;
+
+  background-color: @basic_grey;
 
   @media (min-width: @tablet-width) {
-    min-height: 601px;
+    margin-left: -30px;
+    margin-right: -30px;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 404px;
+    margin-left: -110px;
+    margin-right: -110px;
     position: relative;
   }
 }
 
 .location__text {
-  outline: black 3px solid;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding-top: 28px;
-  padding-left: 19px;
-  padding-bottom: 22px;
+  padding-bottom: 26px;
 
   @media (min-width: @tablet-width) {
-    width: 624px;
+    padding: 62px 50px 57px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 570px;
+    outline: 1px solid green;
+    width: 416px;
     position: absolute;
-    top: 95px;
-    left: 0;
+    top: 98px;
+    left: 110px;
+    background-color: @basic-white;
+    padding: 63px 75px 55px 76px;
   }
 }
 
 .location__subtitle {
   margin: 0;
+  flex-basis: 50%;
 
   font-family: @special-font;
   font-size: 16px;
@@ -43,16 +49,63 @@
   font-weight: normal;
   color: #111111;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+    flex-basis: 25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 40%;
+    line-height: 24px;
+  }
 }
 
 .location__adress {
   margin: 0;
+  flex-basis: 50%;
 
   font-size: 14px;
   line-height: 20px;
   color: @special_dark-grey;
+
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    flex-basis: 25%;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-basis: 40%;
+    text-align: left;
+  }
+}
+
+.location__map {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    height: 405px;
+  }
+
+  @media (min-width: @desktop-width) {
+    z-index: -1;
+    height: 406px;
+  }
 }
 
 .location--white {
   background-color: @basic-white;
+  z-index: 100;
 }
