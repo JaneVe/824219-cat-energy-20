@@ -41,7 +41,7 @@
         <section class="programm">
           <h1 class="programm__title title">Подбор программы</h1>
           <form class="programm__form form" action="https://echo.htmlacademy.ru" method="POST">
-            <p class="form__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+            <p class="form__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
             <div class="form__information-wrapper">
               <fieldset class="form__information form-block">
                 <legend class="visually-hidden">Информация о коте</legend>
@@ -65,20 +65,20 @@
                 <legend class="visually-hidden">Выбор программы</legend>
                 <ul class="form__option option-list">
                   <li class="option-list__item">
-                    <label>
-                      <input type="radio" name="option" value="slimming" checked>
+                    <input class="form__visually-hidden option-list__input-radio" type="radio" id="slim" name="option" value="slimming" checked>
+                    <label class="option-list__radio" for="slim">
                       Похудение
                     </label>
                   </li>
                   <li class="option-list__item">
-                    <label>
-                      <input type="radio" name="option" value="weighting">
+                    <input class="form__visually-hidden option-list__input-radio" type="radio" id="fat" name="option" value="weighting">
+                    <label class="option-list__radio" for="fat">
                       Набор массы
                     </label>
                   </li>
                   <li class="option-list__item">
-                    <label>
-                      <input type="radio" name="option" value="notknow">
+                    <input class="form__visually-hidden option-list__input-radio" type="radio" id="dtknow" name="option" value="notknow">
+                    <label class="option-list__radio" for="dtknow">
                       Не знаю (Нужен ваш совет)
                     </label>
                   </li>
@@ -89,46 +89,45 @@
               <legend class="form__contacts-title form-title">Контактные данные (владельца кота)</legend>
               <div class="form-block__fieldset-wrapper">
                 <div class="form__email">
-                  <label>E-mail:*
-                    <input class="form__textform" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                  <label class="info-block__label">E-mail:*
+                    <input class="form__textform form__textform--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
                   </label>
                 </div>
                 <div class="form__tel">
-                  <label>Телефон:*
-                    <input class="form__textform" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                  <label class="info-block__label">Телефон:*
+                    <input class="form__textform form__textform--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
                   </label>
                 </div>
               </div>
             </fieldset>
-            <div class="form__comment form-block">
-              <label class="form__comment-title form-title">Комментарий
-                <textarea class="form__textarea-comment" name="comment" rows="8" cols="50">Расскажите обо всех повадках кота</textarea>
-              </label>
-            </div>
+            <fieldset class="form__comment form-block">
+              <label class="form__comment-title form-title" for="complace">Комментарий</label>
+              <textarea class="form__textarea-comment" id="complace" name="comment">Расскажите обо всех повадках кота</textarea>
+            </fieldset>
             <fieldset class="form__additional form-block">
               <legend class="form__additional-title form-title">Дополнительно</legend>
               <ul class="form__additional-list form-additional">
                 <li class="form-additional__item">
-                  <label>
-                    <input type="checkbox" name="sweetener" checked>
+                  <input class="form__visually-hidden form-additional__input-checkbox" type="checkbox" id="swt" name="sweetener" checked>
+                  <label class="form-additional__checkbox" for="swt">
                     Сахарозаменитель
                   </label>
                 </li>
                 <li class="form-additional__item">
-                  <label>
-                    <input type="checkbox" name="water">
+                  <input class="form__visually-hidden form-additional__input-checkbox" type="checkbox" id="dwt" name="water">
+                  <label class="form-additional__checkbox" for="dwt">
                     Питьевая вода
                   </label>
                 </li>
                 <li class="form-additional__item">
-                  <label>
-                    <input type="checkbox" name="milk">
+                  <input class="form__visually-hidden form-additional__input-checkbox" type="checkbox" id="mk" name="milk">
+                  <label class="form-additional__checkbox" for="mk">
                     Молоко
                   </label>
                 </li>
                 <li class="form-additional__item">
-                  <label>
-                    <input type="checkbox" name="vitamins">
+                  <input class="form__visually-hidden form-additional__input-checkbox" type="checkbox" id="vits" name="vitamins">
+                  <label class="form-additional__checkbox" for="vits">
                     Витамины
                   </label>
                 </li>

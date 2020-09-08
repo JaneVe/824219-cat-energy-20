@@ -9,11 +9,13 @@
 
     max-width: 708px;
     margin: 0 auto;
+    border-top: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop-width) {
     padding: 0 110px;
     max-width: 1220px;
+    border-top: none;
   }
 }
 
@@ -200,6 +202,8 @@
 }
 
 .story__slider {
+  text-align: center;
+
   @media (min-width: @tablet-width) {
     background-color: #eaeaea;
     margin-left: -30px;
@@ -207,9 +211,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 56%;
-    position: relative;
+    width: 50%;
     margin-left: 110px;
     margin-right: 0;
+    background-image: linear-gradient(to right, @basic_grey 50%, #eaeaea 50%);
   }
 }
