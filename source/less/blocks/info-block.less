@@ -1,0 +1,20 @@
+.info-block {
+  margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.info-block__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}

@@ -1,17 +1,18 @@
-.additional-list {
-  outline: solid 3px greenyellow;
-}
-
 .additional-list__item {
-  outline: solid 3px black;
 
-  min-height: 98px;
+  border-top: 1px solid @special-grey;
+
+  &:nth-last-child(1) {
+    border-bottom: 1px solid @special-grey;
+  }
 
   @media (min-width: @tablet-width) {
-    min-height: 140px;
+    border-left: 1px solid @special-grey;
+    border-right: 1px solid @special-grey;
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 72px;
+    border-left: none;
+    border-right: none;
   }
 }

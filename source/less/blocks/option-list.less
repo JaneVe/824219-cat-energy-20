@@ -1,7 +1,116 @@
-.option-list {
-  outline: solid 3px blue;
+.option-list__item {
+  color: @special-dark-grey-2;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
 }
 
-.option-list__item {
-  color: @special_dark-grey-2;
+.option-list__radio {
+  position: relative;
+
+  padding-left: 45px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid @special-grey;
+
+    @media (min-width: @tablet-width) {
+      width: 38px;
+      height: 38px;
+      top: -5px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+
+      border: 1px solid @grey-2;
+
+      @media (min-width: @tablet-width) {
+        width: 38px;
+        height: 38px;
+        top: -5px;
+      }
+    }
+  }
+
+  &:active {
+    color: fade(@special-dark-grey-2, 30%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 0;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+
+      border: 1px solid fade(@grey-2, 30%);
+
+      @media (min-width: @tablet-width) {
+        width: 38px;
+        height: 38px;
+        top: -5px;
+      }
+    }
+  }
+}
+
+.option-list__input-radio:checked + .option-list__radio::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 13.5px;
+  border-radius: 50%;
+  top: 4px;
+  left: 8px;
+  background: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 6px;
+    left: 11px;
+  }
+}
+
+.option-list__input-radio:checked:active + .option-list__radio::after {
+  content: "";
+  position: absolute;
+  width: 13.5px;
+  height: 13.5px;
+  border-radius: 50%;
+  top: 4px;
+  left: 8px;
+  background: fade(@basic-green, 30%);
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 6px;
+    left: 11px;
+  }
 }

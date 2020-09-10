@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 15px;
@@ -16,7 +16,7 @@
 
 .products__slim,
 .products__pro {
-  background-color: @basic_grey;
+  background-color: @basic-grey;
   margin-bottom: 20px;
   position: relative;
 
@@ -71,7 +71,7 @@
     }
   }
 
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid @special-grey-3;
 
   @media (min-width: @tablet-width) {
     margin-left: 53px;
@@ -125,7 +125,7 @@
   padding-right: 57px;
   position: relative;
 
-  &::before {
+  &::after {
     position: absolute;
     content: "";
     background-image: url("../img/icon-right-arrow-long.svg");
@@ -140,7 +140,29 @@
     }
   }
 
+  &:hover {
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 32px;
+      height: 12px;
+      top: 6px;
+      right: 0;
+    }
+  }
+
   &:active {
     color: rgba(0, 0, 0, 0.3);
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/icon-right-arrow-verylong-opacity.svg");
+      width: 32px;
+      height: 12px;
+      top: 6px;
+      right: 0;
+    }
   }
 }

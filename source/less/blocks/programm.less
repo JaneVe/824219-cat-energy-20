@@ -1,20 +1,45 @@
 .programm {
-  outline: orange 3px solid;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 82px;
+  }
 }
 
 .programm__title {
   margin: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-top: 27px;
+  margin-bottom: 38px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (max-width: @mobile-width-only) {
+    border-top: 1px solid @special-grey-2;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 21px;
+  }
 }
 
 .programm__form {
   @media (min-width: @tablet-width) {
-    padding: 0 40px;
-    margin-bottom: 72px;
+    max-width: 630px;
+    margin: 0 auto;
   }
 
-  @media (min-width: @tablet-width) {
-    padding: 0;
-
-    margin-bottom: 82px;
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    margin: 0;
   }
 }

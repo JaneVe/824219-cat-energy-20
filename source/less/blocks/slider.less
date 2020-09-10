@@ -1,5 +1,43 @@
-.slider {
-  outline: greenyellow 3px solid;
+.slider__img {
+  margin-bottom: 24px;
+  height: 235px;
+
+
+  @media (min-width: @tablet-width) {
+    height: 560px;
+    width: 600px;
+    @img-shift: -203px;
+    position: relative;
+    top: @img-shift;
+    margin-bottom: @img-shift;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 536px;
+    @img-desktop-shift: -194px;
+    position: relative;
+    top: @img-desktop-shift;
+    margin-bottom: @img-desktop-shift;
+    right: 50px;
+  }
+}
+
+.slider__controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 36px;
+  padding-top: 2px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 64px;
+    padding-right: 0;
+    padding-top: 17px;
+  }
 }
 
 .slider__button {
@@ -9,4 +47,106 @@
   font-weight: normal;
   color: @basic-black;
   text-transform: uppercase;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted fade(@basic-black, 40%);
+
+    &:hover {
+      border-bottom: 1px solid fade(@basic-black, 40%);
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+}
+
+.slider__button--state--before {
+  margin-right: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    //margin-right: 350px;
+  }
+}
+//полоса//
+.slider__button-toggle {
+
+  margin-left: 18px;
+  margin-right: 17px;
+
+  @media (min-width: @tablet-width) {
+    background: #dcdcdc;
+    border-radius: 6px;
+    width: 428px;
+    height: 6px;
+    border: none;
+    outline: 0;
+    margin-left: 25px;
+    margin-right: 20px;
+  }
+}
+
+//кружочек//
+.slider__button-range {
+  background: @basic-white;
+  border: 1px solid @special-grey;
+  box-sizing: border-box;
+  border-radius: 6px;
+  width: 84px;
+  height: 14px;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin-left: 46%;
+    margin-top: -14px;
+    box-shadow: 0 2px 5px 0 @special-grey;
+
+    &:hover {
+      box-shadow: 0 4px 6px 0 fade(@basic-black, 30%);
+    }
+
+    &:active {
+      border: 1px solid @basic-green;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: @basic-green;
+    border-radius: 6px;
+    width: 35px;
+    height: 6px;
+    top: 3px;
+    left: 5px;
+
+    @media (min-width: @tablet-width) {
+      width: 8px;
+      height: 8px;
+      top: 12px;
+      left: 12px;
+    }
+  }
+}
+
+.slider__button--state--after {
+  margin-left: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
