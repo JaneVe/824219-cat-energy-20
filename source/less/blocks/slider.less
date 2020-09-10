@@ -47,11 +47,20 @@
   font-weight: normal;
   color: @basic-black;
   text-transform: uppercase;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted fade(@basic-black, 40%);
+
+    &:hover {
+      border-bottom: 1px solid fade(@basic-black, 40%);
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
@@ -87,7 +96,7 @@
 //кружочек//
 .slider__button-range {
   background: @basic-white;
-  border: 1px solid #cdcdcd;
+  border: 1px solid @special-grey;
   box-sizing: border-box;
   border-radius: 6px;
   width: 84px;
@@ -100,12 +109,21 @@
     border-radius: 50%;
     margin-left: 46%;
     margin-top: -14px;
+    box-shadow: 0 2px 5px 0 @special-grey;
+
+    &:hover {
+      box-shadow: 0 4px 6px 0 fade(@basic-black, 30%);
+    }
+
+    &:active {
+      border: 1px solid @basic-green;
+    }
   }
 
   &::before {
     content: "";
     position: absolute;
-    background: @basic_green;
+    background: @basic-green;
     border-radius: 6px;
     width: 35px;
     height: 6px;

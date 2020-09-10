@@ -3,7 +3,7 @@
 }
 
 .form-additional__item {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
@@ -30,12 +30,54 @@
     width: 28px;
     height: 28px;
 
-    border: 1px solid @special_grey;
+    border: 1px solid @special-grey;
 
     @media (min-width: @tablet-width) {
       width: 38px;
       height: 38px;
       top: -5px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+
+      width: 28px;
+      height: 28px;
+
+      border: 1px solid @grey-2;
+
+      @media (min-width: @tablet-width) {
+        width: 38px;
+        height: 38px;
+        top: -5px;
+      }
+    }
+  }
+
+  &:active {
+    color: fade(@basic-black, 30%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 0;
+
+      width: 28px;
+      height: 28px;
+
+      border: 1px solid fade(@grey-2, 30%);
+
+      @media (min-width: @tablet-width) {
+        width: 38px;
+        height: 38px;
+        top: -5px;
+      }
     }
   }
 }
