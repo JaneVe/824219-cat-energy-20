@@ -21,7 +21,7 @@
 .product-other__title {
   margin: 0;
   padding-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 
   font-family: @special-font;
   font-size: 16px;
@@ -46,14 +46,19 @@
 }
 
 .product-other__table {
-  margin-bottom: 12px;
+  margin-bottom: 13.5px;
+  border-collapse: collapse;
+
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
-    flex-basis: 32%;
+    width: 32%;
   }
 }
 
@@ -71,6 +76,7 @@
     font-size: 16px;
     line-height: 20px;
     margin-left: 45px;
+    padding-top: 5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -85,7 +91,7 @@
   margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {

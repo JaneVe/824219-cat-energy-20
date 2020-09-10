@@ -61,14 +61,15 @@
 .form__information,
 .form__programms {
   padding: 0;
+  margin: 0;
 
   @media (min-width: @desktop-width) {
     width: 570px;
   }
 }
 
-.form__information {
-  margin-bottom: 10px;
+.form__container-information {
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 54px;
@@ -187,7 +188,13 @@
 
 .form__contacts {
   padding: 0;
-  margin-bottom: 11px;
+  margin: 0;
+}
+
+.form__container-contacts {
+
+  position: relative;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 45px;
@@ -196,11 +203,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 67px;
   }
-}
-
-.form__fieldset-contacts {
-
-  position: relative;
 
   &::before {
     content: "";
@@ -228,7 +230,7 @@
 .form__contacts-title {
   margin: 0;
   padding: 0;
-  padding-right: 25px;
+  padding-right: 20px;
   margin-bottom: 30px;
   padding-left: 20px;
   margin-left: -20px;
@@ -236,7 +238,7 @@
 
 
   @media (max-width: @mobile-width-only) {
-    width: 187px;
+    width: 181px;
   }
 
   @media (min-width: @tablet-width) {
@@ -259,9 +261,13 @@
 }
 
 .form__comment {
-
-  margin-bottom: 25px;
   padding: 0;
+  margin: 0;
+}
+
+.form__container-comment {
+  margin-bottom: 25px;
+
   position: relative;
 
   &::before {
@@ -335,7 +341,12 @@
 
 .form__additional {
   padding: 0;
-  margin-bottom: 19px;
+  margin: 0;
+}
+
+.form__container-additional {
+  position: relative;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 17px;
@@ -344,10 +355,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 27px;
   }
-}
-
-.form__fieldset-additional {
-  position: relative;
 
   &::before {
     content: "";
