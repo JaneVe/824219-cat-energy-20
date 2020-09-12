@@ -32,8 +32,20 @@
     }
   }
 
+  &:hover .social-button__icon-ig {
+    circle {
+      fill: @basic-green;
+    }
+  }
+
   &:active .social-button__icon {
     path {
+      fill: fade(@basic-green, 30%);
+    }
+  }
+
+  &:active .social-button__icon-ig {
+    circle {
       fill: fade(@basic-green, 30%);
     }
   }

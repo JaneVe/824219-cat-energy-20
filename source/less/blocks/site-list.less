@@ -1,22 +1,23 @@
 .site-list__item {
-  font-family: @special-font;
+  font-weight: 500;
   font-size: 20px;
   line-height: 20px;
-  font-weight: 500;
-  color: @basic-black;
+  font-family: @special-font;
   text-transform: uppercase;
+  color: @basic-black;
 
   @media (max-width: @mobile-width-only) {
-    border-top: 1px solid #e6e6e6;
-    text-align: center;
     padding-top: 22px;
     padding-bottom: 24px;
+
+    text-align: center;
+    border-top: 1px solid #e6e6e6;
   }
 
   @media (min-width: @tablet-width) {
+    font-weight: normal;
     font-size: 18px;
     line-height: 24px;
-    font-weight: normal;
   }
 
   @media (min-width: @desktop-width) {
@@ -39,13 +40,15 @@
   }
 
   &--activ {
-    color: fade(@basic-black, 70%);
     position: relative;
+    color: fade(@basic-black, 70%);
 
     @media (min-width: @tablet-width) {
       color: @basic-black;
+    }
 
-      &::after {
+    &::after {
+      @media (min-width: @tablet-width) {
         content: "";
         position: absolute;
         top: 34px;
@@ -61,13 +64,17 @@
 .site-list__link--white {
   @media (min-width: @desktop-width) {
     color: @basic-white;
+  }
 
-    &:not(.site-list__link--activ) {
-      &:hover {
+  &:not(.site-list__link--activ) {
+    &:hover {
+      @media (min-width: @desktop-width) {
         color: fade(@basic-white, 60%);
       }
+    }
 
-      &:active {
+    &:active {
+      @media (min-width: @desktop-width) {
         color: fade(@basic-white, 30%);
       }
     }
@@ -76,10 +83,12 @@
 
 .site-list__link--activ.site-list__link--white {
   @media (min-width: @desktop-width) {
-    color: @basic-white;
     position: relative;
+    color: @basic-white;
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
       top: 34px;

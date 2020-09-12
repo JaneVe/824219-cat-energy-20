@@ -1,16 +1,19 @@
 .copyright__button-academy {
-  font-size: 16px;
-  line-height: auto;
-  color: @special-dark-grey;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  margin-right: -5px;
   padding-top: 19px;
   padding-bottom: 20px;
-  margin-right: -5px;
+
+  font-size: 16px;
+  line-height: auto;
+  color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
 
   &:hover .copyright__icon {
     path {
@@ -20,10 +23,6 @@
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-top: 15px;
   }
 }
 

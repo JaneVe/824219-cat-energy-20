@@ -1,25 +1,19 @@
 .product {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 13px;
+  align-items: center;
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    padding-bottom: 40px;
 
     background-color: @basic-grey;
-    padding-left: 36px;
-    padding-right: 36px;
-    padding-bottom: 40px;
-    padding-top: 145px;
-    width: 252px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 35px;
-    padding-right: 30px;
+    width: 245px;
     padding-top: 0;
-    width: 180px;
   }
 }
 
@@ -28,77 +22,89 @@
 
   @media (max-width: @mobile-width-only) {
     flex-basis: 50%;
+    height: 112px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 43px;
+  }
+}
+
+.product__photo-img {
+  width: 140px;
+
+  @media (min-width: @tablet-width) {
+    @photo-img-shift: -44px;
+    position: relative;
+    top: @photo-img-shift;
+    width: 100%;
+    margin-bottom: @photo-img-shift;
+  }
+
+  @media (min-width: @desktop-width) {
+    @photo-img-desk-shift: -52px;
+    position: relative;
+    top: @photo-img-desk-shift;
+    margin-bottom: @photo-img-desk-shift;
   }
 }
 
 .product__info {
   @media (max-width: @mobile-width-only) {
     flex-basis: 50%;
+    margin-top: 20px;
   }
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
     align-items: center;
+    width: 252px;
     margin-bottom: 33px;
+    padding-right: 36px;
+    padding-left: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 3px;
-    padding-right: 6px;
+    width: 180px;
+    padding-right: 31px;
+    padding-left: 36px;
   }
 }
 
 .product__title {
   margin: 0;
-  padding-bottom: 14px;
+  margin-bottom: 13px;
   padding-right: 40px;
 
-  font-family: @special-font;
+  font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  font-weight: normal;
+  font-family: @special-font;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    text-align: center;
-    font-size: 20px;
-    line-height: 24px;
-    color: @special-dark-grey-2;
-    padding-bottom: 14px;
+    margin-bottom: 14px;
     padding-right: 48px;
     padding-left: 48px;
+
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: @special-dark-grey-2;
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 18px;
-    padding-left: 16px;
-    padding-top: 145px;
-    padding-bottom: 18px;
     margin: 0;
+    padding-right: 18px;
+    padding-bottom: 18px;
+    padding-left: 16px;
 
     font-size: 20px;
     line-height: 21px;
-  }
-}
-
-.product__button {
-  flex-basis: 100%;
-  padding-top: 11px;
-  padding-bottom: 11px;
-  text-align: center;
-  margin-top: 19px;
-
-  @media (min-width: @tablet-width) {
-    padding-right: 93px;
-    padding-left: 93px;
-    margin: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-left: 4px;
-    width: 168px;
-    padding-right: 0;
-    padding-left: 0;
   }
 }
 
@@ -106,25 +112,13 @@
   color: @special-dark-grey-2;
 }
 
-.product__column {
-  font-size: 12px;
-  line-height: 16px;
-  padding-top: 0;
-
-  &:nth-of-type(2n) {
-    text-align: right;
-  }
-
-  @media (min-width: @tablet-width) {
-    font-size: 16px;
-    line-height: 16px;
-    padding-top: 6px;
-    padding-bottom: 9px;
-  }
+.product__table {
+  width: 100%;
+  border-collapse: collapse;
 
   @media (min-width: @desktop-width) {
-    padding-top: 7px;
-    padding-bottom: 9px;
+    width: 166px;
+    padding-left: 3px;
   }
 }
 
@@ -134,7 +128,49 @@
   }
 }
 
-.product__table {
-  width: 100%;
-  border-collapse: collapse;
+.product__column {
+  padding-top: 0;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  &:nth-of-type(2n) {
+    text-align: right;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 6px;
+    padding-bottom: 9px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-left: 5px;
+  }
+}
+
+.product__button {
+  flex-basis: 100%;
+  margin-top: 20px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-right: 93px;
+    padding-left: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+    margin-left: 4px;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

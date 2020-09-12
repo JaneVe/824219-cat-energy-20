@@ -1,6 +1,7 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 
   @media (min-width: @tablet-width) {
@@ -25,10 +26,11 @@
   display: block;
   width: 40px;
   height: 30px;
-  cursor: pointer;
-  border: none;
-  background-color: @basic-white;
   padding: 0;
+
+  background-color: @basic-white;
+  border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -43,7 +45,9 @@
   width: 24px;
   height: 1.5px;
   background-color: @basic-black;
-  box-shadow: 0 8px 0 0 @basic-black, 0 16px 0 0 @basic-black;
+  box-shadow:
+    0 8px 0 0 @basic-black,
+    0 16px 0 0 @basic-black;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
