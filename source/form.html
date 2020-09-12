@@ -10,7 +10,11 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo main-header__logo--mobile" href="index.html">
-          <img src="img/logo-mobile.svg" width="226" height="38" alt="Логотип Кэт энерджи">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="190" height="38" alt="Логотип Кэт энерджи">
+          </picture>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
@@ -45,7 +49,7 @@
             <div class="form__wrapper">
               <fieldset class="form__information form-block">
                 <div class="form__container-information">
-                  <legend class="visually-hidden">Информация о коте</legend>
+                  <h2 class="visually-hidden">Информация о коте</h2>
                   <div class="form__name info-block">
                     <label class="info-block__label">Имя:*
                       <input class="form__textform" type="text" name="name" placeholder="барсик" required>
@@ -65,7 +69,7 @@
               </fieldset>
               <fieldset class="form__programms form-block">
                 <div class="form__container-programms">
-                  <legend class="visually-hidden">Выбор программы</legend>
+                  <h2 class="visually-hidden">Выбор программы</h2>
                   <ul class="form__option option-list">
                     <li class="option-list__item">
                       <input class="form__visually-hidden option-list__input-radio" type="radio" id="slim" name="option" value="slimming" checked>
@@ -93,18 +97,18 @@
               <div class="form__container-contacts">
                 <h2 class="form__contacts-title form-title">Контактные данные (владельца кота)</h2>
                 <div class="form-block__fieldset-wrapper">
-                  <div class="form__email">
+                  <div class="form__email info-block">
                     <label class="info-block__label info-block__label--email">E-mail:*
                       <input class="form__textform form__textform--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                      <svg class="form__icon-email" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="14" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
+                      <svg class="form__icon-email" version="1.1" id="icon-email" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="14" viewBox="0 0 17 13" style="enable-background:new 0 0 17 13;" xml:space="preserve">
                         <path fill="#222222" d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
                       </svg>
                     </label>
                   </div>
-                  <div class="form__tel">
+                  <div class="form__tel info-block">
                     <label class="info-block__label info-block__label--tel">Телефон:*
                       <input class="form__textform form__textform--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-                      <svg class="form__icon-tel" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="20" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+                      <svg class="form__icon-tel" version="1.1" id="icon-tel" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20" height="20" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
                         <path fill="#222222" d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
                         <path fill="#222222"
                           d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
@@ -174,7 +178,11 @@
           <p class="location__adress">ул. Большая Конюшенная, д. 19/8<br> <br> Санкт-Петербург</p>
         </div>
         <div class="location__map">
-          <img src="https://via.placeholder.com/320x362" alt="Карта">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="location__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png" width="320" height="362" alt="Карта">
+          </picture>
         </div>
       </section>
       <div class="footer__wrapper">
@@ -246,14 +254,11 @@
                   Инстаграм
                 </span>
                 <svg class="social-button__icon social-button__icon-ig" version="1.1" id="icon-ig" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16" height="16" viewBox="0 0 16.1 16" style="enable-background:new 0 0 16.1 16;" xml:space="preserve">
-                  <style type="text/css">
-                    .st0{fill:#231F20;}
-                  </style>
-                  <path class="st0" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
+                  <path class="st0" fill="#231F20" d="M11.8,1C13.6,1,15,2.4,15,4.2v7.7c0,1.7-1.4,3.1-3.1,3.1H4.2C2.4,15,1,13.6,1,11.8V4.2C1,2.4,2.4,1,4.2,1H11.8
                     M11.8,0H4.2C1.9,0,0,1.9,0,4.2v7.7C0,14.1,1.9,16,4.2,16h7.7c2.3,0,4.2-1.9,4.2-4.2V4.2C16,1.9,14.1,0,11.8,0z"/>
-                  <path class="st0" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1S9.7,11.1,8,11.1S4.9,9.7,4.9,8S6.3,4.9,8,4.9 M8,3.9C5.7,3.9,3.9,5.7,3.9,8
+                  <path class="st0" fill="#231F20" d="M8,4.9c1.7,0,3.1,1.4,3.1,3.1S9.7,11.1,8,11.1S4.9,9.7,4.9,8S6.3,4.9,8,4.9 M8,3.9C5.7,3.9,3.9,5.7,3.9,8
                     s1.8,4.1,4.1,4.1s4.1-1.8,4.1-4.1S10.3,3.9,8,3.9z"/>
-                  <circle class="st0" cx="12.3" cy="3.7" r="0.9"/>
+                  <circle class="st0" fill="#231F20" cx="12.3" cy="3.7" r="0.9"/>
                 </svg>
               </a>
             </li>

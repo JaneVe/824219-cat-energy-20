@@ -1,18 +1,18 @@
 .button {
-  background-color: @basic-green;
-  font-family: @special-font;
+  font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  font-weight: normal;
+  font-family: @special-font;
   text-transform: uppercase;
   color: @basic-white;
+  background-color: @basic-green;
 
   &:hover {
     background-color: @basic-green-2;
   }
 
   &:active {
+    color: fade(@basic-white, 30%);
     background-color: @basic-green-2;
-    color: rgba(255, 255, 255, 0.3);
   }
 }

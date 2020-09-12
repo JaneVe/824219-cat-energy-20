@@ -1,14 +1,16 @@
 .promo {
-  margin-bottom: 31px;
   position: relative;
+  margin-bottom: 31px;
+
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    background-image: none;
-    text-align: left;
-    padding-left: 82px;
-    padding-bottom: 508px;
     margin-bottom: 34px;
+    padding-bottom: 508px;
+    padding-left: 82px;
+
+    text-align: left;
+    background-image: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -16,24 +18,70 @@
     padding-bottom: 200px;
     padding-left: 74px;
   }
-}
 
-.promo::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: -20px;
-  right: -20px;
-  min-height: 305px;
-  background-color: @basic-green;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    left: -20px;
+    z-index: -1;
+    min-height: 305px;
+    background-color: @basic-green;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  @media (min-width: @tablet-width) {
-    display: none;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 167px;
+    left: 0;
+    width: 280px;
+    height: 270px;
+    background-image: url("../img/index-can-mobile@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-can-mobile@2x.png");
+      background-size: cover;
+    }
+
+    @media (min-width: @tablet-width) {
+      top: 226px;
+      left: 0;
+      z-index: -1;
+      width: 709px;
+      height: 609px;
+
+      background-image: url("../img/index-can-tablet@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-can-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -25px;
+      left: 447px;
+      width: 552px;
+      height: 499px;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+      }
+    }
   }
 }
 
@@ -43,21 +91,21 @@
   padding-right: 15px;
   padding-left: 15px;
 
-
-  font-family: @special-font;
+  font-weight: normal;
   font-size: 36px;
   line-height: 36px;
-  font-weight: normal;
+  font-family: @special-font;
   color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 40px;
+    padding-top: 25px;
+    padding-right: 190px;
+    padding-left: 6px;
+
     font-size: 60px;
     line-height: 60px;
     color: @basic-black;
-    padding-top: 25px;
-    padding-left: 6px;
-    padding-right: 190px;
-    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -68,23 +116,24 @@
 .promo__slogan {
   margin: 0;
   padding-top: 25px;
+  padding-right: 40px;
   padding-bottom: 314px;
   padding-left: 40px;
-  padding-right: 40px;
 
-  font-family: @special-font;
   font-size: 14px;
   line-height: 14px;
+  font-family: @special-font;
   text-transform: uppercase;
   color: @basic-white;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+    padding: 0;
+    padding-left: 6px;
+
     font-size: 20px;
     line-height: 20px;
     color: @basic-black;
-    padding: 0;
-    padding-left: 6px;
-    margin-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -94,15 +143,16 @@
 }
 
 .promo__button {
+  padding: 10px 72px;
+
   font-size: 14px;
   line-height: 18px;
 
-  padding: 10px 72px;
-
   @media (min-width: @tablet-width) {
+    padding: 10px 27px 13px 27px;
+
     font-size: 20px;
     line-height: 0;
-    padding: 10px 27px 13px 27px;
   }
 
   @media (min-width: @desktop-width) {
