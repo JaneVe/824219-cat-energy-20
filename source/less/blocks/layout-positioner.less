@@ -1,8 +1,10 @@
 .layout-positioner {
   @media (min-width: @desktop-width) {
     position: relative;
+  }
 
-    &::before {
+  &::before {
+    @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
       top: 0;

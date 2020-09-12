@@ -23,7 +23,6 @@
 .story__wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
-    //justify-content: space-between;
     margin-right: -110px;
     margin-left: -110px;
     padding-left: 110px;
@@ -208,8 +207,10 @@
 
     line-height: 20px;
     text-align: left;
+  }
 
-    span {
+  span {
+    @media (min-width: @desktop-width) {
       margin-left: 57px;
     }
   }

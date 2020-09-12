@@ -52,8 +52,34 @@
 
   list-style: none;
 
+  @media (min-width: @tablet-width) {
+    width: 320px;
+    margin-bottom: 77px;
+    padding-top: 112px;
+    padding-bottom: 57px;
+    padding-left: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    margin-bottom: 0;
+  }
+
   &:nth-last-child(1) {
     padding-bottom: 0;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:nth-last-child(2) {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
@@ -69,6 +95,23 @@
     @media (min-width: @tablet-width) {
       width: 80px;
       height: 80px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      counter-increment: section;
+      content: counter(section) "";
+      position: absolute;
+      z-index: -1;
+      top: -40px;
+      left: 115px;
+      width: 133px;
+      height: 280px;
+      font-size: 280px;
+      line-height: 280px;
+      font-family: @special-font;
+      color: @basic-grey;
     }
   }
 
@@ -119,52 +162,13 @@
       }
     }
   }
-
-  @media (min-width: @tablet-width) {
-    width: 320px;
-    margin-bottom: 77px;
-    padding-top: 112px;
-    padding-bottom: 57px;
-    padding-left: 0;
-
-    font-size: 16px;
-    line-height: 24px;
-
-    &::after {
-      counter-increment: section;
-      content: counter(section) "";
-      position: absolute;
-      z-index: -1;
-      top: -40px;
-      left: 115px;
-      width: 133px;
-      height: 280px;
-      font-size: 280px;
-      line-height: 280px;
-      font-family: @special-font;
-      color: @basic-grey;
-    }
-
-    &:nth-last-child(1),
-    &:nth-last-child(2) {
-      margin-bottom: 0;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    //padding: 0;
-    //padding-top: 112px;
-    //padding-bottom: 57px;
-    width: 245px;
-    margin-bottom: 0;
-  }
 }
 
 .features__text {
   margin: 0;
 
-  @media (max-width: @mobile-width-only) {
-    br {
+  br {
+    @media (max-width: @mobile-width-only) {
       display: none;
     }
   }

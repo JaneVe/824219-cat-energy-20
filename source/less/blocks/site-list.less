@@ -45,8 +45,10 @@
 
     @media (min-width: @tablet-width) {
       color: @basic-black;
+    }
 
-      &::after {
+    &::after {
+      @media (min-width: @tablet-width) {
         content: "";
         position: absolute;
         top: 34px;
@@ -62,13 +64,17 @@
 .site-list__link--white {
   @media (min-width: @desktop-width) {
     color: @basic-white;
+  }
 
-    &:not(.site-list__link--activ) {
-      &:hover {
+  &:not(.site-list__link--activ) {
+    &:hover {
+      @media (min-width: @desktop-width) {
         color: fade(@basic-white, 60%);
       }
+    }
 
-      &:active {
+    &:active {
+      @media (min-width: @desktop-width) {
         color: fade(@basic-white, 30%);
       }
     }
@@ -79,8 +85,10 @@
   @media (min-width: @desktop-width) {
     position: relative;
     color: @basic-white;
+  }
 
-    &::after {
+  &::after {
+    @media (min-width: @desktop-width) {
       content: "";
       position: absolute;
       top: 34px;

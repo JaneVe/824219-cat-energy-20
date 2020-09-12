@@ -11,6 +11,10 @@
   line-height: auto;
   color: @special-dark-grey;
 
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
+
   &:hover .copyright__icon {
     path {
       fill: @basic-green;
@@ -19,10 +23,6 @@
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding-top: 15px;
   }
 }
 

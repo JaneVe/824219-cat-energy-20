@@ -66,10 +66,10 @@
 }
 
 .form__container-information {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 73px;
+    margin-bottom: 75px;
   }
 
   @media (min-width: @desktop-width) {
@@ -80,7 +80,7 @@
 .form__textform {
   flex-grow: 1;
   margin-left: 16px;
-  padding-top: 12px;
+  padding-top: 13px;
   padding-right: 0;
   padding-bottom: 13.5px;
   padding-left: 14px;
@@ -93,6 +93,14 @@
   color: @special-dark-grey;
   border: 1px solid @light-grey;
 
+  @media (min-width: @tablet-width) {
+    margin-left: 18px;
+    padding: 10px 50px 11px 18px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &--age {
     @media (max-width: @mobile-width-only) {
       flex-grow: 0;
@@ -100,14 +108,29 @@
     }
   }
 
-  &--tel {
-    margin-left: 9px;
-    padding-right: 30px;
-  }
-
   &--email {
     margin-left: 12px;
     padding-right: 30px;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 21px;
+      padding-left: 20px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 23px;
+      padding-left: 15px;
+    }
+  }
+
+  &--tel {
+    margin-left: 9px;
+    padding-right: 30px;
+
+    @media (min-width: @tablet-width) {
+      padding-left: 20px;
+      margin-left: 13px;
+    }
   }
 
   &::placeholder {
@@ -125,30 +148,6 @@
   &:active {
     border: 1px solid @special-dark-grey;
   }
-
-  @media (min-width: @tablet-width) {
-    margin-left: 18px;
-    padding: 10px 50px 11px 18px;
-
-    font-size: 20px;
-    line-height: 30px;
-
-    &--tel {
-      padding-left: 20px;
-      margin-left: 13px;
-    }
-
-    &--email {
-      padding-left: 24px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &--email {
-      margin-left: 23px;
-      padding-left: 15px;
-    }
-  }
 }
 
 .form__textform--tel:active + .form__icon-tel,
@@ -165,16 +164,6 @@
   }
 }
 
-.form__icon-tel {
-  position: absolute;
-  top: 13px;
-  right: 12px;
-
-  @media (min-width: @desktop-width) {
-    right: 15px;
-  }
-}
-
 .form__icon-email {
   position: absolute;
   top: 16px;
@@ -182,6 +171,16 @@
 
   @media (min-width: @desktop-width) {
     right: 18px;
+  }
+}
+
+.form__icon-tel {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+
+  @media (min-width: @desktop-width) {
+    right: 15px;
   }
 }
 
@@ -219,7 +218,7 @@
 
 .form__container-contacts {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
@@ -272,8 +271,7 @@
   }
 }
 
-.form__email.info-block,
-.form__tel {
+.form__email.info-block {
   margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
@@ -282,6 +280,12 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    width: 570px;
+  }
+}
+
+.form__tel {
+  @media (min-width: @desktop-width) {
     width: 570px;
   }
 }
@@ -317,6 +321,10 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-bottom: 60px;
   }
 }
@@ -338,7 +346,7 @@
 .form__textarea-comment {
   width: 100%;
   min-height: 135px;
-  margin-top: 34px;
+  margin-top: 33px;
   padding-top: 12px;
 
   font-weight: normal;
