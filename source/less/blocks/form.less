@@ -150,17 +150,17 @@
   }
 }
 
-.form__textform--tel:active + .form__icon-tel,
-.form__textform--email:active + .form__icon-email {
-  path {
-    fill: @basic-green;
-  }
-}
-
 .form__textform--tel:required + .form__icon-tel,
 .form__textform--email:required + .form__icon-email {
   path {
     fill: @status-error;
+  }
+}
+
+.form__textform--tel:active + .form__icon-tel,
+.form__textform--email:active + .form__icon-email {
+  path {
+    fill: @basic-green;
   }
 }
 
