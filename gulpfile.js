@@ -29,6 +29,7 @@ exports.clean = clean;
 
 const copy = () => {
   return gulp.src([
+    "source/*.html",
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
@@ -116,7 +117,7 @@ const watcher = () => {
 }
 
 exports.build = gulp.series(
-  clean, copy, styles, webp, html, sprite
+  clean, copy, styles, images, sprite, webp, html
 );
 
 exports.default = gulp.series(
