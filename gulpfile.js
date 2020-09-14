@@ -10,13 +10,20 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore")
-const del = require("dell");
+const del = require("del");
+const htmlmin = require('gulp-htmlmin');
 
-//Build
+
+
+const html = () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('build'));
+};
 
 const clean = () => {
   return del("build");
-};
+}
 
 exports.clean = clean;
 
@@ -25,24 +32,16 @@ const copy = () => {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
-  ], {
+    "source/*.ico",
+    "source/css/style.css"
+    ],
+    {
       base: "source"
-  })
- .pipe(gulp.dest("build"));
- };
+    })
+  .pipe(gulp.dest("build"));
+ }
 
  exports.copy = copy;
-
- const build = gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
- );
-
- exports.build = build;
 
 //Images
 
@@ -61,7 +60,7 @@ const images = () => {
     imagemin.optipng({optimizationLevel: 3}),
     imagemin.mozjpeg({progressive: true}),
     imagemin.svgo()
-    ]));
+    ]))
 }
 
 exports.images = images;
@@ -98,7 +97,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -116,6 +115,10 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
+exports.build = gulp.series(
+  clean, copy, styles, webp, html, sprite
+);
+
 exports.default = gulp.series(
-  styles, server, watcher
+  styles, html, server, watcher
 );
