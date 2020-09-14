@@ -22,6 +22,8 @@ const html = () => {
     .pipe(gulp.dest('build'));
 };
 
+exports.html = html;
+
 const clean = () => {
   return del("build");
 }
@@ -33,9 +35,7 @@ const copy = () => {
     "source/*.html",
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
-    "source/*.ico",
-    "source/css/style.css"
+    "source/js/**"
     ],
     {
       base: "source"
@@ -126,10 +126,10 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
-exports.build = gulp.series(
-  clean, copy, styles, compress, images, sprite, webp, html
+const build = gulp.series(
+  clean, copy, styles, compress, images, sprite, html
 );
 
-exports.default = gulp.series(
-  styles, html, server, watcher
-);
+exports.build = build;
+
+gulp.task("default", gulp.series(build, gulp.parallel(server, watcher)));
