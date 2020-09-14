@@ -1,6 +1,12 @@
-.social-button__icon {
-  path {
-    fill: @grey;
+.social-button__link {
+  fill: @grey;
+
+  &:hover {
+    fill: @basic-green;
+  }
+
+  &:active {
+    fill: fade(@basic-green, 30%);
   }
 }
 
@@ -22,31 +28,5 @@
   @media (min-width: @tablet-width) {
     width: 26px;
     height: 28px;
-  }
-}
-
-.social-button__link {
-  &:hover .social-button__icon {
-    path {
-      fill: @basic-green;
-    }
-  }
-
-  &:hover .social-button__icon-ig {
-    circle {
-      fill: @basic-green;
-    }
-  }
-
-  &:active .social-button__icon {
-    path {
-      fill: fade(@basic-green, 30%);
-    }
-  }
-
-  &:active .social-button__icon-ig {
-    circle {
-      fill: fade(@basic-green, 30%);
-    }
   }
 }
