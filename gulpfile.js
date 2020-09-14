@@ -12,6 +12,7 @@ const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore")
 const del = require("del");
 const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');
 
 
 
@@ -93,6 +94,15 @@ const styles = () => {
 
 exports.styles = styles;
 
+const compress = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(uglify())
+  .pipe(rename("script.min.js"))
+  .pipe(gulp.dest("build/js/"))
+}
+
+exports.compress = compress;
+
 // Server
 
 const server = (done) => {
@@ -117,7 +127,7 @@ const watcher = () => {
 }
 
 exports.build = gulp.series(
-  clean, copy, styles, images, sprite, webp, html
+  clean, copy, styles, compress, images, sprite, webp, html
 );
 
 exports.default = gulp.series(
