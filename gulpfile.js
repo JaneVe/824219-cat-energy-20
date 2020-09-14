@@ -73,7 +73,7 @@ const createWebp = () => {
   .pipe(gulp.dest("source/img"));
 }
 
-exports.webp = createWebp;
+exports.createWebp = createWebp;
 
 // Styles
 
@@ -127,7 +127,7 @@ const watcher = () => {
 }
 
 const build = gulp.series(
-  clean, copy, styles, compress, images, sprite, html
+  clean, copy, styles, compress, images, createWebp, sprite, html
 );
 
 exports.build = build;
